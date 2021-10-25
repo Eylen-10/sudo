@@ -110,8 +110,9 @@ function trigger(){
 .main{
     display: flex;
     justify-content: space-around;
-    /* width: 100vw; */
+    min-width: 100vw;
     flex-wrap: wrap-reverse;
+    margin-top: 30px;
 }
 .row{
     display: flex;
