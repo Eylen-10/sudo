@@ -1,15 +1,16 @@
 <template>
         <div class="main">
+            <transition name="fade" appear   v-if="!isVisiable">
+                <div class="fancy-border">
+                    <div v-for="(row,index) of mySudoMap" :key=index class="row">
+                        <div v-for="(col,index) of row" :key=index class="col" >
+                            <input type="text" class="text" v-model="col.cur" :class="{red:col.isNeed,green:((col.cur == col.correct) && col.isNeed)}" :disabled="!col.isNeed">
+                        </div>
+                    </div> 
+                </div>
+            </transition>
+            <transition name="fade" appear  v-else>
             <div class="fancy-border">
-                <div v-for="(row,index) of mySudoMap" :key=index class="row">
-                    <div v-for="(col,index) of row" :key=index class="col" >
-
-                        <input type="text" class="text" v-model="col.cur" :class="{red:col.isNeed,green:((col.cur == col.correct) && col.isNeed)}" :disabled="!col.isNeed">
-                    </div>
-                </div> 
-            </div>
-            <transition name="fade" appear>
-            <div class="fancy-border" v-if="isVisiable">
                 <div v-for="(row,index) of mySudoMap" :key=index class="row">
                     <div v-for="(col,index) of row" :key=index class="col" >
                         <input type="text" class="text" v-model="col.correct" :class="{green:(col.isNeed)}" disabled>
