@@ -83,14 +83,16 @@ function trigger(){
     color: #9EDE73 !important;
 }
 .fancy-border {
-  width: 70vh;
-  height: 70vh;
+  width: 30vw;
+  min-width: 280px;
+  min-height: 280px;
+  height: 30vw;
   border: 25px solid #B88846;
   color: #B88846;
   border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -108,7 +110,7 @@ function trigger(){
 .main{
     display: flex;
     justify-content: space-around;
-    width: 100vw;
+    /* width: 100vw; */
     flex-wrap: wrap-reverse;
 }
 .row{
