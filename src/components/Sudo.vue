@@ -111,7 +111,7 @@ function trigger(){
     display: flex;
     justify-content: space-around;
     min-width: 100vw;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 .row{
