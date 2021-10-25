@@ -17,7 +17,7 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
 export default defineConfig({
-  base:'/sudo/',
+  base:'/sudo/dist',
   // 定义别名
   alias: {
     '@': path.resolve(__dirname, 'src'),
